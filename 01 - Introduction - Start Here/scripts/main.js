@@ -23,7 +23,7 @@ var App = React.createClass({
     }
   },
   addFish : function(fish) {
-    var timestamp = (new Date).getTime();
+    var timestamp = (new Date()).getTime();
     // Update the state object
     this.state.fishes['fish-' + timestamp] = fish;
     // Set the state
@@ -36,7 +36,7 @@ var App = React.createClass({
           <Header tagline="Fresh Seafood Market" />
         </div>
         <Order/>
-        <Inventory addFish/>
+        <Inventory addFish={this.addFish}/>
       </div>
     )
   }
@@ -48,7 +48,7 @@ var App = React.createClass({
   <AddFishForm/>
 */
 var AddFishForm = React.createClass({
-  createFish : function() {
+  createFish : function(event) {
     // 1. Stop the form from submitting
     event.preventDefault();
     // 2. Take the data from the form and create an object
