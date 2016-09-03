@@ -20,7 +20,6 @@ var Catalyst = require('react-catalyst');
 /*
   App
 */
-
 var App = React.createClass({
   mixins : [Catalyst.LinkedStateMixin],
   getInitialState : function() {
@@ -265,12 +264,10 @@ var Inventory = React.createClass({
   }
 })
 
-
 /*
   StorePicker
   This will let us make <StorePicker/>
 */
-
 var StorePicker = React.createClass({
   mixins : [History],
 
@@ -297,7 +294,6 @@ var StorePicker = React.createClass({
 /*
   Not Found
 */
-
 var NotFound = React.createClass({
 
   render : function() {
@@ -307,7 +303,6 @@ var NotFound = React.createClass({
   }
 
 });
-
 
 /*
  * Routes
