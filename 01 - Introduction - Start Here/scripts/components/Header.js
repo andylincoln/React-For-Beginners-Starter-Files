@@ -5,7 +5,7 @@
 
 import React from "react";
 
-class Headeer extends React.Component {
+class Header extends React.Component {
   render() {
     return (
       <header className="top">
