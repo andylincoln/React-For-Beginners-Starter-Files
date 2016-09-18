@@ -1,21 +1,13 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Router, Route} from 'react-router';
 
-var ReactRouter = require('react-router');
-var Router  = ReactRouter.Router;
-var Route = ReactRouter.Route;
-var createBrowserHistory = require('history/lib/createBrowserHistory');
-
+import createHistory from 'history';
 /*
  * Import Components
  */
 import NotFound from "./components/NotFound";
 import StorePicker from "./components/StorePicker";
-import Fish from "./components/Fish";
-import AddFishForm from "./components/AddFishForm";
-import Header from "./components/Header";
-import Order from "./components/Order";
-import Inventory from "./components/Inventory";
 import App from "./components/App";
 
 /*
@@ -23,7 +15,7 @@ import App from "./components/App";
 */
 
 var routes = (
-  <Router history={createBrowserHistory()}>
+  <Router history={createHistory()}>
     <Route path="/" component={StorePicker}/>
     <Route path="/store/:storeId" component={App}/>
     <Route path="*" component={NotFound}/>

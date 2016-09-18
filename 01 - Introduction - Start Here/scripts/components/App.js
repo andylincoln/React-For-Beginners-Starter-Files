@@ -8,6 +8,7 @@ import Fish from './Fish';
 import Order from './Order';
 import Inventory from './Inventory';
 import Catalyst from 'react-catalyst';
+import AddFishForm from "./AddFishForm";
 
 // Firebase
 import Rebase  from 're-base';
