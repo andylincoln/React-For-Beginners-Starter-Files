@@ -3,7 +3,7 @@
   <AddFishForm />
 */
 
-import React from "react";
+import React from 'react';
 
 var AddFishForm = React.createClass({
   createFish : function(event) {

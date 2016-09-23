@@ -3,10 +3,10 @@
   <Header/>
 */
 
-import React from "react";
+import React from 'react';
 
-class Header extends React.Component {
-  render() {
+var Header = React.createClass({
+  render : function() {
     return (
       <header className="top">
         <h1>Catch
@@ -15,14 +15,13 @@ class Header extends React.Component {
             <span className="the">the</span>
           </span>
           Day</h1>
-        <h3 className="tagline"><span>{this.props.tagline}</span></h3>
+        <h3 className="tagline"><span>{this.props.tagline}</span></h3> 
       </header>
     )
+  }, 
+  propTypes : {
+    tagline : React.PropTypes.string.isRequired
   }
-}
-
-Header.propTypes = {
-  tagline: React.PropTypes.string.isRequired
-}
+});
 
 export default Header;

@@ -3,10 +3,9 @@
   <Order/>
 */
 
-import React from "react";
-import CSSTransitionGroup from "react-addons-css-transition-group";
-import h from "../helpers";
-
+import React from 'react';
+import CSSTransitionGroup from 'react-addons-css-transition-group';
+import h from '../helpers';
 
 var Order = React.createClass({
   renderOrder : function(key) {
@@ -32,7 +31,7 @@ var Order = React.createClass({
   },
   render : function() {
     var orderIds = Object.keys(this.props.order);
-
+    
     var total = orderIds.reduce((prevTotal, key)=> {
       var fish = this.props.fishes[key];
       var count = this.props.order[key];
@@ -48,7 +47,7 @@ var Order = React.createClass({
     return (
       <div className="order-wrap">
         <h2 className="order-title">Your Order</h2>
-
+        
         <CSSTransitionGroup
               className="order"
               component="ul"
@@ -67,9 +66,9 @@ var Order = React.createClass({
     )
   },
   propTypes : {
-    fishes: React.PropTypes.object.isRequired,
-    order: React.PropTypes.object.isRequired,
-    removeFromOrder: React.PropTypes.func.isRequired
+    fishes : React.PropTypes.object.isRequired,
+    order : React.PropTypes.object.isRequired,
+    removeFromOrder : React.PropTypes.func.isRequired
   }
 });
 
