@@ -5,3 +5,5 @@ class Order extends React.Component {
     return (<p>Order</p>);
   }
 }
+
+export default Order;
